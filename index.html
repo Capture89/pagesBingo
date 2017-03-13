@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Fantasy">	
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	 <link href="http://cdn.bootcss.com/Swiper/3.4.1/css/swiper.min.css" rel="stylesheet"> 
+	<link href="http://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+	<link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+	<script src="http://cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
+	<script src="http://cdn.bootcss.com/Swiper/3.4.1/js/swiper.jquery.min.js"></script>
+	<title>纯属练习</title>
+</head>
+<body>
+	<!-- --TO DO LIST-- - - - Confirm the method about getting for share. -->
+	<img class="share" style="display:none;" src="images/bingo.jpg" alt="">
+
+	<div class="page_arrow">
+		<i class="fa fa-chevron-up"></i>
+	</div>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide slider1">
+				
+				<img class="animated pulse infinite bingo" src="images/bingo.jpg" alt="">
+				
+			</div>
+			<div class="swiper-slide slider2">
+				<div class="bi midline a"></div>
+				<ul class="dots">
+					<li class="bi dot1 a"></li>
+					<li class="bi dot2 a"></li>
+					<li class="bi dot3 a"></li>
+				</ul>
+				<ul class="txts">
+					<li class="txt1">
+						<span class="lsi a">微信开发运营</span>
+						<span class="lsi a">H5互动游戏</span>
+						<span class="lsi a">WEB开发</span>
+						<span class="lsi a">活动专题</span>
+					</li>
+					<li class="lsi txt2 a">停车场付费及管理系统</li>
+					<li class="lsi txt3 a">720度全景<br>VR全景</li>
+				</ul>
+			</div>
+			<div class="swiper-slide slider3">
+				<div class="case_cubes">
+					<div class="riul case1 a"></div>
+					<div class="riul case2 a"></div>
+					<div class="riul case3 a"></div>
+					<div class="riul case4 a"></div>
+					<div class="riul case5 a"></div>
+				</div>
+			</div>
+
+			<script>
+				$(function(){
+					$('.slider3 div').each(function(index, el) {
+						$(el).click(function() {
+							$(this).toggleClass('case_expand');
+						});
+					});
+				})
+				
+			</script>
+			
+			<div class="swiper-slide slider4">
+				<h3 class="lsi">我们的客户</h3>
+				<div class="swiper-container-h fi a">
+					<div class="swiper-wrapper">
+						<img class="swiper-slide" src="images/logo1.jpg" alt="">
+						<img class="swiper-slide" src="images/logo2.jpg" alt="">
+						<img class="swiper-slide" src="images/logo3.jpg" alt="">
+						<img class="swiper-slide" src="images/logo4.jpg" alt="">
+						<img class="swiper-slide" src="images/logo5.jpg" alt="">
+						<img class="swiper-slide" src="images/logo6.jpg" alt="">
+						<img class="swiper-slide" src="images/logo7.jpg" alt="">
+						<img class="swiper-slide" src="images/logo8.jpg" alt="">
+						<img class="swiper-slide" src="images/logo9.jpg" alt="">
+						<img class="swiper-slide" src="images/logo10.jpg" alt="">
+					</div>
+				</div>
+
+			</div>
+			<div class="swiper-slide slider5">
+				<h3 class="lsi">我们在这里</h3>
+				<div class="fi map"></div><!-- <img src="images/map.jpg" alt=""> -->
+				<div class="animated pulse infinite map_box"></div>
+			</div>
+			<div class="swiper-slide slider6">
+				<div class="fi group">
+					<img class="fi mem1 a" src="images/qiu.png" alt="">
+					<img class="fi mem2 a" src="images/qiang.png" alt="">
+					<img class="fi mem3 a" src="images/hua.png" alt="">
+					<img class="fi mem4 a" src="images/tian.png" alt="">
+					<img class="fi mem5 a" src="images/wan.png" alt="">
+				</div>
+				<h4 class="bi a">长按二维码看精彩案例展示</h4>
+				<img class="fi qr a" src="images/qr.png" alt="">
+				<div class="lsi contact a">
+					<a href="tel:0411-82354300"><i class="animated tada infinite fa fa-phone"></i><span>0411-82354300</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="loading">	
+		<img src="images/loading.gif" alt="">
+	</div>
+	
+	<script>
+		setTimeout(function(){
+			$('.loading').addClass('animated flipOutY');
+			$('.loading').hide();
+		},2000)
+	  var mySwiper = new Swiper ('.swiper-container', {
+	    initilaSlide: 0,
+	    direction: 'vertical',
+	    // mousewheelControl: true,
+	    effect: 'coverflow',
+	    // observer: true,
+	    lazyLoading: true,
+		lazyLoadingInPrevNext : true,
+	    nextButton: '.page_arrow',
+	    // onInit:function(){},
+	    onSlideChangeStart:function(){
+			$('.page_arrow').show();
+	    	// $('.swiper-container .swiper-slide').each(function(index, el) {
+	    		$('.swiper-container .swiper-slide .lsi').removeClass('animated lightSpeedIn');
+	    		$('.swiper-container .swiper-slide .bi').removeClass('animated bounceIn');
+	    		$('.swiper-container .swiper-slide .fi').removeClass('animated fadeIn');
+	    		$('.swiper-container .swiper-slide .riul').removeClass('animated rotateInUpLeft');
+	    		$('.swiper-container .swiper-slide .td').removeClass('animated tada');
+
+
+	    		$('.swiper-container .swiper-slide:eq(' + (mySwiper.activeIndex) + ') .lsi').addClass('animated lightSpeedIn');
+
+	    		$('.swiper-container .swiper-slide:eq(' + (mySwiper.activeIndex) + ') .bi').addClass('animated bounceIn');
+
+	    		$('.swiper-container .swiper-slide:eq(' + (mySwiper.activeIndex) + ') .fi').addClass('animated fadeIn');
+
+	    		$('.swiper-container .swiper-slide:eq(' + (mySwiper.activeIndex) + ') .riul').addClass('animated rotateInUpLeft');
+
+	    		$('.swiper-container .swiper-slide:eq(' + (mySwiper.activeIndex) + ') .td').addClass('animated tada');
+			// });
+  		  	if(mySwiper.isEnd){
+				$('.slider6 .bi').toggleClass('animated bounceIn');
+				$('.slider6 .fi').toggleClass('animated fadeIn');
+				$('.slider6 .lsi').toggleClass('animated lightSpeedIn');
+				$('.page_arrow').hide();
+  		  	}
+	    },
+	    // onSlideChangeEnd:function(){}
+	    
+	 })  
+
+	 var swiperh = new Swiper('.swiper-container-h', {
+	        effect: 'coverflow',
+	        autoplay: 1500,
+	        autoplayDisableOnInteraction: false,
+	        loop: true,
+	        grabCursor: true,
+	        centeredSlides: true,
+	        slidesPerView: 'auto',
+	        coverflow: {
+	            rotate: 50,
+	            stretch: 0,
+	            depth: 100,
+	            modifier: 1,
+	            slideShadows : true
+	        }
+	    });
+	
+	  </script>
+</body>
+</html>
